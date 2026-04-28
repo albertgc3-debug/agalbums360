@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AG Albums360</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="brand-strip">
+        <span id="brand-strip-title">AG Albums360</span>
+      </header>
+
+      <section class="app-panel">
+        <div class="toolbar-row">
+          <label class="language-box" for="language-select">
+            <span id="language-label">Idioma</span>
+            <select id="language-select"></select>
+          </label>
+        </div>
+
+        <section class="section-block">
+          <div class="section-title-row">
+            <h2 id="search-section-title">1. Cercar .vtour</h2>
+          </div>
+
+          <div class="hero-actions">
+            <button id="pick-open-button" class="btn btn-primary">Cercar .vtour</button>
+          </div>
+
+          <p id="picker-hint" class="picker-hint"></p>
+          <p id="selected-tour-text" class="selected-tour">Tour seleccionat: cap</p>
+        </section>
+
+        <section class="section-block compact-block">
+          <h2 id="open-section-title">2. Obrir el tour seleccionat</h2>
+          <button id="open-button" class="btn btn-primary btn-wide">Obrir tour seleccionat</button>
+        </section>
+
+        <section class="section-block compact-block">
+          <p id="progress-text" class="progress-copy">Extraccio: 0%</p>
+          <div class="progress-track">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </section>
+
+        <section class="section-block compact-block logs-section">
+          <div class="logs-header">
+            <h2 id="logs-title">Info visualitzacio</h2>
+            <button id="toggle-logs-button" class="btn btn-soft btn-small">Amagar info</button>
+          </div>
+          <div id="log-container" class="log-container">
+            <pre id="log-text" class="log-text">Els missatges apareixeran aqui...</pre>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
