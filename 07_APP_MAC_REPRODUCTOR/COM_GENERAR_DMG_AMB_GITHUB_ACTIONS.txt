@@ -1,0 +1,13 @@
+COM GENERAR EL .DMG DE MAC AMB GITHUB ACTIONS
+
+1. Entra al repositori a GitHub.
+2. Ves a la pestanya Actions.
+3. A l'esquerra tria Build Mac Reproductor.
+4. Prem Run workflow.
+5. Espera que acabi.
+6. Obre l'execucio acabada i descarrega l'artefacte AG-Albums360-Desktop-macOS.
+
+Important:
+- Aquest build genera l'app Mac sense signar.
+- En alguns Mac pot sortir avis de seguretat.
+- Per distribuir sense avisos cal Apple Developer i signatura/notaritzacio.
