@@ -1,0 +1,59 @@
+{
+  "name": "ag-albums360-mac-player",
+  "version": "0.2.0",
+  "description": "AG Albums360 Desktop per Mac: reproductor de tours .vtour",
+  "main": "main.js",
+  "author": "AgAlbums360",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:mac": "electron-builder --mac dmg zip"
+  },
+  "build": {
+    "appId": "com.agalbums360.desktop",
+    "productName": "AG Albums360 Desktop",
+    "artifactName": "AG Albums360 Desktop-${version}-${os}-${arch}.${ext}",
+    "files": [
+      "**/*",
+      "!dist/**/*"
+    ],
+    "fileAssociations": [
+      {
+        "ext": "vtour",
+        "name": "VTour package",
+        "description": "Panoramic tour package",
+        "role": "Viewer"
+      }
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "category": "public.app-category.photography",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false
+    },
+    "dmg": {
+      "title": "AG Albums360 Desktop ${version}",
+      "contents": [
+        { "x": 130, "y": 220 },
+        { "x": 410, "y": 220, "type": "link", "path": "/Applications" }
+      ]
+    }
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.9",
+    "electron-is-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
